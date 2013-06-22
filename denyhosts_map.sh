@@ -1,18 +1,18 @@
 #!/bin/bash
 
-###############################################################################
+################################################################################
 # denyHosts_map.sh
-###############################################################################
+################################################################################
 # 
 # A script to scrape the denyhosts' logs and generate kml suitable for
 # plotting on Google maps.
 #
-# usage: "$ ./denyHostsMap.sh [<outputFile> <workDir>] | [? | h | help | usage]"
+# usage: "$ ./denyhosts-map.sh [<inputFile> <outputFile>] | [? | h | help | usage]"
 # 
 # Original Author: github.com/marekq/denyhosts-map
 # Refactored by: github.com/sgskinner
 # 
-###############################################################################
+################################################################################
 
 
 # Used when script invoked with no args
@@ -20,14 +20,14 @@ DEFAULT_INPUT_FILE="/etc/hosts.deny"
 DEFAULT_OUTPUT_FILE="$PWD/map.kml"
 
 
-###- usage -###################################################################
+###- usage -####################################################################
 #
 # Function for explaining optional args when "help" or "?" are supplied to
 # this script as args
 #
-###############################################################################
+################################################################################
 function usage {
-    printf "$ ./denyHosts_map.sh [<inputFile> <outputFile>] | [? | h | help]\n"
+    printf "$ ./denyhosts_map.sh [<inputFile> <outputFile>] | [? | h | help]\n"
     printf "\n"
     printf "With no args, '$DEFAULT_INPUT_FILE' will be used as the input file,\n"
     printf "and '$DEFAULT_OUTPUT_FILE' will be used as the output file.\n"
@@ -67,7 +67,7 @@ function concatHeader {
 }
 
 
-###- concatLocEntry -############################################################
+###- concatLocEntry -###########################################################
 # 
 # Concatenate a single kml entry for one IP to outputFile
 #
