@@ -10,4 +10,10 @@ INSTALL
 
 	The script has been tested under Debian and Ubuntu. Clone the Git repository and run the denyhosts_map.sh script with a regular user account. The generated KML will appear in your current directory.
 
-	./denyhosts_map.sh
+usage: "$ ./denyhosts-map.sh [<inputFile> <outputFile>] | [? | h | help | usage]"
+
+With no args, '$DEFAULT_INPUT_FILE' will be used as the input file,
+and '$DEFAULT_OUTPUT_FILE' will be used as the output file (defaults are
+set at the top of the file, currently to "/etc/hosts.deny" and
+"$PWD/map.kml" respectively.
+
